@@ -1,76 +1,37 @@
 body {
 	margin: 50px;
 	background-color: #40779E;
+	height: 700px;
+}
+
+.head {
+	font-size: 40px;
+	color: white;
+	font-family: "Helvetica Neue";
+	text-align: center;
+	width: 800px;
+	margin: 0 auto;
 }
 
 .word {
+	font-size: 80px;
 	color: white;
 	font-family: "Helvetica Neue";
-	display: inline;
-}
-
-.wordContainer {
-	height: 700px;
-	width: 100%;
-	display: inline;
-}
-
-#subjectContainer {
-	animation-name: moveSubject;
-	animation-duration: 10s;
-}
-
-#subject {
+	text-align: center;
+	width: 800px;
+	margin: 0 auto;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
-	text-align: center;
 }
 
-@keyframes moveSubject {
-    0% {
-    	font-size: 1px;
-        /*transform: translate3d(50px, 50px, 0px);*/
-        animation-timing-function: ease-in;
-    }
-    50% {
-    	font-size: 60px;
-/*        transform: translate3d(500px, 500px, 500px);
-*/        animation-timing-function: ease-out;
-    }
-
-    100% {
-    	font-size: 0px;
-        /*transform: translate3d(900px, 900px, 900px);*/
-    }
+#wordContainer {
+	height: 100%;
+	width: 900px;
+	margin: 0 auto;
 }
 
-#word1 {
-	top: 0%;
-	left: 100px;
-	/*position: relative;
-	transform: translateY(-20%);
-	text-align: left;
-	margin-left: 100px;*/
-}
+   
 
-#word2 {
-	top: 10%;
-	left: 500px;
-	/*position: relative;
-	top: 25%;
-	transform: translateY(-20%);
-	text-align: left;
-	margin-left: 100px;*/
-}
 
-#word3 {
-	top: 10%;
-	left: 900px;
-	/*position: relative;
-	top: 25%;
-	transform: translateY(-20%);
-	text-align: left;
-	margin-left: 100px;*/
-}
 

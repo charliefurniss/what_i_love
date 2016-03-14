@@ -1,48 +1,65 @@
 $(document).ready(function() {
 
-	var subjectArray = [
-	{
-		subject: "wine",
-		word1: 		"tasting",
-		word2: 		"Burgundy",
-		word3: 		"Brunello",
-		word4: 		"Hermitage",
-		word5: 		"Pinot Noir",
-		word6: 		"Chardonnay",
-		word7: 		"Gulp",
-		word8: 		"Slurp",
-	}, 
-	{
-		subject: "music",
-		word1: 		"Miles Davis",
-		word2: 		"Nile Rogers",
-		word3: 		"Fender guitars",
-		word4: 		"Fender Rhodes",
-		word5: 		"Fender amps",
-		word6: 		"Soul Jazz Revue",
-		word7: 		"More Boogie",
-		word8: 		"Funk",
-	}]
+	var wordsArray = ["wine tasting", "nuits st george", "brunello di montalcino", "hermitage", "pinot noir", "chardonnay", "miles davis", "nile rodgers", "fender guitars", "fender rhodes", "fender amps", "soul music", "me'shell ndegeocello", "more boogie", "funk", "herbie hancock", "greek oregano", "amorgos", "donoussa", "pacha", "ibiza", "twins", "adoption", "meursault", "slow roast pork shoulder", "gas barbeques", "roses", "joni mitchell", "cornell dupree", "jimmy page", "billy cobham", "bitches brew", "Australian national parks", "zoonotic diseases", "mexico", "tanzania", "lalibela", "steve gadd", "disco music", "george coleman", "cats", "cherry trees", "spring mornings", "log fires", "lamb chops", "mediterranean food", "The South of France", "baritone saxophones", "Roberta Flack"]
 	
-	function chooseWordObject(subjectArray) {
-		var arrayPosition = Math.floor((Math.random() * subjectArray.length));
-		return subjectArray[arrayPosition];
+	function chooseWord(wordsArray) {
+		var arrayPosition = Math.floor((Math.random() * wordsArray.length));
+		return wordsArray[arrayPosition];
 	}
 
-	function showWordsonScreen(subjectObject) {
-		$('#subject').html(subjectObject.subject);
-		$('#word1').html(subjectObject.word1);
-		$('#word2').html(subjectObject.word2);
-		$('#word3').html(subjectObject.word3);
-		$('#word4').html(subjectObject.word4);
-		$('#word5').html(subjectObject.word5);
-		$('#word6').html(subjectObject.word6);
-		$('#word7').html(subjectObject.word7);
-		$('#word8').html(subjectObject.word8);
+	function showWord(word) {
+		$('#word').html(word);
 	}
 
-	var selectedSubjectObject = chooseWordObject(subjectArray);
+	function start(){
+		var selectedWord = chooseWord(wordsArray);
+		showWord(selectedWord);
+		changeWord();
+	}	
 
-	showWordsonScreen(selectedSubjectObject);
+	function changeWord(){
+		var selectedWord = chooseWord(wordsArray);
+		showWord(selectedWord);
+		$('#word').fadeIn();
+		setTimeout(function() {
+			setTimeout(function(){
+				$('#word').fadeOut();
+			}, 6000);
+			changeWord();
+		}, 4000);
+	}
+
+	start();
+
+	// var vx = 3;
+	// var vy = 2;
+
+	// function hitLR(el, bounding) {
+ //    if (el.offsetLeft <= 0 && vx < 0) {
+ //        console.log('LEFT');
+ //        vx = -1 * vx;
+ //    }
+ //    if ((el.offsetLeft + el.offsetWidth) >= bounding.offsetWidth) {
+ //        console.log('RIGHT');
+ //        vx = -1 * vx;
+ //    }
+ //    if (el.offsetTop <= 0 && vy < 0) {
+ //        console.log('TOP');
+ //        vy = -1 * vy;
+ //    }
+ //    if ((el.offsetTop + el.offsetHeight) >= bounding.offsetHeight) {
+ //        console.log('BOTTOM');
+ //        vy = -1 * vy;
+ //    }
+	// }
+
+	// function mover(el, bounding) {
+ //    hitLR(el, bounding);
+ //    el.style.left = el.offsetLeft + vx + 'px';
+ //    el.style.top = el.offsetTop + vy + 'px';
+ //    setTimeout(function() {
+ //        mover(el, bounding);
+ //    }, 50);
+	// }
 
 });
