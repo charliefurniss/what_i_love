@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var wordsArray = ["wine tasting", "nuits st georges", "brunello di montalcino", "miles davis", "stevie wonder", "bass clarinet", "nile rodgers", "fender telecaster", "fender rhodes", "fender twin", "soul music", "me'shell ndegeocello", "more boogie", "funk", "herbie hancock", "greek oregano", "amorgos", "donoussa", "twins", "mount colima", "meursault", "pork and fennel", "lamb and rosemary", "barbecues", "cookbooks", "chilli relish", "roses", "joni mitchell", "cornell dupree", "jimmy page", "billy cobham", "bitches brew", "australian national parks", "zoonotic diseases", "mexico", "tanzania", "lalibela", "steve gadd", "disco", "soul jazz", "george coleman", "cats", "cherry trees", "spring", "marmalade", "preserved lemons", "mediterranean food", "south of france", "baritone saxophone", "roberta flack", "conservation", "mountain gorillas", "marinades", "mushroom stuffing", 'the pyrenees']
+	var wordsArray = ["tasting wine with friends", "wine tasting in burgundy", "coffee notes in brunello di montalcino", "is rioja the best value fine wine?", "miles davis: the picasso of jazz?", "stevie wonder's songwriting", "noodling bass clarinet", "uplifting soul music", "me'shell ndegeocello's bass playing", "I love playing funk music", "herbie hancock's feel", "chicken and greek oregano", "hiking in amorgos", "lying on the beach in donoussa", "the crazines of twins", "mount colima eruption", "the nuttiness of meursault", "pork and fennel", "gas or charcoal barbecues?", "collecting cookbooks", "chilli relish recipe", "growing roses is exciting", "joni mitchell's voice", "cornell dupree's guitar style", "everything about jimmy page", "billy cobham's drum sound", "the atmosphere of bitches brew", "facilities in australian national parks", "the history of zoonotic diseases", "mexican culture", "a tanzanian welcome", "the history of lalibela", "steve gadd's groove", "the energy of disco music", "the soul of soul jazz", "george coleman's sweet tone", "crazy cats", "the scent of cherry blossom", "damp, sunny spring mornings", "homemade marmalade", "chicken with preserved lemons", "mediterranean food", "holidays in the south of france", "baritone saxophone", "roberta flack's voice", " conservation volunteering in tanzania", "mountain gorillas in congo", "experimenting with marinades", "chicken stuffed with mushrooms", 'camping in the pyrenees']
 	
 	function chooseWord(wordsArray) {
 		var arrayPosition = Math.floor((Math.random() * wordsArray.length));
@@ -24,9 +24,9 @@ $(document).ready(function() {
 		setTimeout(function() {
 			setTimeout(function(){
 				$('#word').fadeOut();
-			}, 6000);
+			}, 9000);
 			changeWord();
-		}, 4000);
+		}, 12000);
 	}
 
 	start();
